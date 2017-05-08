@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html ng-app = "LunchCheck">
+  <head>
+    <meta charset="utf-8">
+    <script src = "angular.min.js"></script>
+    <script src="app.js"></script>
+    <title></title>
+
+    <style>
+    input:focus, select:focus, textarea:focus {
+        outline: none;
+    }
+</style>
+  </head>
+  <body>
+    <div ng-controller = "LunchCheckController">
+Insert : <input type = "text"  style="width:300px;border-style: solid;border-color:{{borderColor}}"
+ng-model='lunchInput'>
+<br>
+<br>
+      <input type = "button" name = "Check If Too Much" value = "Check If Too Much"
+      ng-click = "evaluate()">
+          <p style="color:{{fontColor}}">{{lunchOutput}}</p?
+    </div>
+  </body>
+</html>
