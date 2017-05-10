@@ -52,9 +52,6 @@ toBuy.removeItem = function (itemIndex) {
 toBuy.toShowEverythingBoughtMessage = function(){
   return ShoppingListCheckOffService.getToBuyItems().length == 0;
 };
-toBuy.toShowMessage = function(){
-  return ShoppingListCheckOffService.getToBuyItems().length > 0;
-};
 }
 
 AlreadyBoughtController.$inject = ['ShoppingListCheckOffService'];
@@ -65,11 +62,6 @@ alreadyBought.items = ShoppingListCheckOffService.getBoughtItems();
 alreadyBought.toShowNothingMessage = function(){
   return ShoppingListCheckOffService.getBoughtItems().length == 0;
 };
-alreadyBought.toShowMessage = function(){
-  return ShoppingListCheckOffService.getBoughtItems().length > 0;
-};
-
-
 }
 
 })();
