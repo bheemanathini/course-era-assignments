@@ -11,8 +11,8 @@
   <body>
 
     <div id="list1" ng-controller = 'ToBuyController as toBuy'>
-      <h3 ng-if="toBuy.toShowMessage()"> To Buy </h3>
-      <h3 ng-if="toBuy.toShowEverythingBoughtMessage()"> Everything is bought </h3>
+      <h3> To Buy </h3>
+      <h3 style="color:red;" ng-if="toBuy.toShowEverythingBoughtMessage()"> Everything is bought </h3>
 
       <ol>
         <li ng-repeat="item in toBuy.items">
@@ -22,9 +22,8 @@
       </ol>
    </div>
       <div id="list2" ng-controller = 'AlreadyBoughtController as bought'>
-
-      <h3 ng-if="bought.toShowNothingMessage()"> Nothing bought yet </h3>
-      <h3 ng-if="bought.toShowMessage()"> Already Bought </h3>
+      <h3> Already Bought </h3>
+      <h3  style="color:red;" ng-if="bought.toShowNothingMessage()"> Nothing bought yet </h3>
 
       <ol>
         <li ng-repeat="item in bought.items">
