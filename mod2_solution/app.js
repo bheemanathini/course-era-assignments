@@ -63,11 +63,9 @@ function AlreadyBoughtController(ShoppingListCheckOffService){
 
 alreadyBought.items = ShoppingListCheckOffService.getBoughtItems();
 alreadyBought.toShowNothingMessage = function(){
-  console.log(ShoppingListCheckOffService.getBoughtItems().length);
   return ShoppingListCheckOffService.getBoughtItems().length == 0;
 };
 alreadyBought.toShowMessage = function(){
-  console.log(ShoppingListCheckOffService.getBoughtItems().length);
   return ShoppingListCheckOffService.getBoughtItems().length > 0;
 };
 
