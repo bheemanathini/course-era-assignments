@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html ng-app = "NarrowItDownApp">
+
+  <head>
+    <script src = "angular.min.js"></script>
+    <script src="app.js"></script>
+    <title>Narrow Down Your Menu Choice</title>
+  </head>
+  <body>
+    <div  ng-controller="NarrowItDownController as controller">
+      <h1>Narrow Down Your Chinese Menu Choice</h1>
+      <input type="text" placeholder="search term" class="form-control" ng-model='controller.searchTerm'>
+      <button class="btn btn-primary" ng-click='controller.search()'>Narrow It Down For Me!</button>
+  <found-items found='controller.items' on-remove='controller.removeItem(index)'></found-items>
+</div>
+  </body>
+</html>
