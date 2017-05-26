@@ -19,7 +19,6 @@ function RoutesConfig($stateProvider, $urlRouterProvider) {
     templateUrl: 'src/menulist/templates/home.template.html'
   })
 
-  // Premade list page
   .state('categoryList', {
     url: '/categories',
     templateUrl: 'src/menulist/templates/menu-categorylist.html',
